@@ -8,8 +8,22 @@
 
 /* General */
 * {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
     background-color: var(--navy);
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 h2,
@@ -59,6 +73,7 @@ h1 {
 p {
     color: var(--light-gray);
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 #logo {
@@ -67,9 +82,23 @@ p {
     margin-left: calc((100vw - var(--logo-width)) / 2);
 }
 
+#socials a,
+#back-to-top,
+.project-container a {
+    transition: opacity 0.2s ease;
+}
+
+#socials a:focus-visible,
+#back-to-top:focus-visible,
+.project-container a:focus-visible {
+    outline: 2px solid var(--yellow);
+    outline-offset: 4px;
+}
+
 main {
-    width: 60vw;
+    width: min(60vw, 1100px);
     margin: auto;
+    padding: 2rem 0 4rem;
 }
 
 /* About section */
@@ -79,7 +108,7 @@ main {
     height: fit-content;
     padding: 1rem;
     align-items: center;
-
+    margin-bottom: 3rem;
 }
 
 #profile-container {
@@ -157,6 +186,18 @@ span.tech.clicked {
     text-shadow: 0 0 1px var(--yellow), 0 0 2px var(--yellow), 0 0 3px var(--yellow);
 }
 
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(250, 208, 44, 0.15);
+    border-radius: 1rem;
+    background: rgba(7, 24, 47, 0.6);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
 .project-container:nth-of-type(even) {
     text-align: right;
     justify-content: end;
@@ -167,14 +208,15 @@ span.tech.clicked {
 }
 
 .project-description {
-    width: 80%;
+    width: min(80%, 780px);
 }
 
 .screenshot-container {
     display: flex;
     max-width: 100%;
     gap: 1rem;
-    overflow: scroll;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
 }
 
 .screenshot-container.even {
@@ -182,14 +224,16 @@ span.tech.clicked {
 }
 
 .screenshot {
-    width: 171px;
-    height: 95.02px;
+    width: min(22vw, 171px);
+    height: auto;
+    aspect-ratio: 16 / 9;
     display: block;
     cursor: pointer;
     transition: transform 0.35s ease;
     margin-top: auto;
     margin-bottom: auto;
     opacity: 65%;
+    border-radius: 0.5rem;
 }
 
 .screenshot:hover {
@@ -210,5 +254,17 @@ span.year {
     #about {
         flex-direction: column;
         height: fit-content;
+    }
+
+    .project-container {
+        padding: 1rem;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+
+    .screenshot {
+        width: min(45vw, 220px);
     }
 }
