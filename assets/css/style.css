@@ -116,12 +116,16 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    flex-shrink: 0;
 }
 
 #profile-photo {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border-radius: 100%;
+    width: 200px;
     height: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 p:first-of-type {
