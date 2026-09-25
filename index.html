@@ -49,6 +49,28 @@
             <!-- alternating left/right text/image -->
             <div class="project-container">
                 <div class="project-description">
+                    <h2>Webinterface for MLVA of C. diff</h2>
+                    <p>
+                        Built during my internship at the Leiden Centre of Applied Bioscience as part of my
+                        Bio-informatics studies. This Django application performs Multiple-Locus Variable-number
+                        tandem repeat Analysis (MLVA) on <i>Clostridioides difficile</i> for use at the LUMC.
+                        Users upload their sequences, after which BLAST runs locally as a background job queued
+                        through Redis. No reference genome is needed to find the loci. The results are visualized
+                        in an interactive minimum spanning tree made with D3.js, alongside other plots.
+                        I built the application on my own and presented it to microbiologists at the LUMC to
+                        gather their input.
+                    </p>
+                    <p class="technology">
+                        <span class="tech">HTML</span> - <span class="tech">CSS</span> - <span class="tech">JS</span> -
+                        <span class="tech">Python</span> - <span class="tech">Django</span> - <span
+                            class="tech">Tailwind</span> - <span class="tech">DaisyUI</span> - <span
+                            class="tech">SQLite</span> - <span class="tech">BLAST</span> - <span
+                            class="tech">Redis</span> - <span class="tech">D3</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-description">
                     <h2>BISA</h2>
                     <p>
                         BISA stands for "Bio-informatics student-assistant" and is a passion project made to simplify
@@ -102,7 +124,7 @@
                             class="tech">SQLite</span> - <span class="tech">D3</span> - <span class="tech">Bokeh</span>
                     </p>
                 </div>
-                <div class="screenshot-container even">
+                <div class="screenshot-container">
                     <a href="assets/img/projects/Stravis/login.png">
                         <img src="assets/img/projects/Stravis/login.png" alt="Login page" class="screenshot">
                     </a>
@@ -173,7 +195,7 @@
                             class="tech">RabbitMQ</span>
                     </p>
                 </div>
-                <div class="screenshot-container even">
+                <div class="screenshot-container">
                     <a href="assets/img/projects/MasterBlast/login.png">
                         <img src="assets/img/projects/MasterBlast/login.png" alt="BISA login" class="screenshot">
                     </a>

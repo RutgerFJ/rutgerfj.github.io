@@ -223,7 +223,7 @@ span.tech.clicked {
     padding-bottom: 0.5rem;
 }
 
-.screenshot-container.even {
+.project-container:nth-of-type(even) .screenshot-container {
     flex-direction: row-reverse;
 }
 
