@@ -10,96 +10,193 @@
 </head>
 
 <body>
-    <header id="header">
-        <img src="assets/img/logo.svg" alt="logo" id="logo">
+    <header id="header" class="site-header">
+        <div class="container header-inner">
+            <img src="assets/img/logo.svg" alt="logo" id="logo">
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#about" class="highlight">About</a>
+                <a href="#skills" class="highlight">Skills</a>
+                <a href="#projects" class="highlight">Projects</a>
+            </nav>
+        </div>
     </header>
     <main>
-        <section id="about"> <!-- hero item: about me -->
+        <section id="about" class="hero"> <!-- hero item: about me -->
             <div id="profile-container">
                 <img src="assets/img/profile.png" alt="profile photo" id="profile-photo">
-                <nav id="socials"> <!-- github, linkedin, e-mail -->
-                    <a class="button" href="http://github.com/rutgerfj" target="_blank">
+                <nav id="socials" aria-label="Social links"> <!-- github, linkedin, e-mail -->
+                    <a class="button" href="http://github.com/rutgerfj" target="_blank" rel="noreferrer">
                         <img src="assets/img/github.svg" alt="GitHub" id="github">
                     </a>
-                    <a class="button" href="http://linkedin.com/in/rutgerfjansen" target="_blank">
+                    <a class="button" href="http://linkedin.com/in/rutgerfjansen" target="_blank" rel="noreferrer">
                         <img src="assets/img/linkedin.svg" alt="LinkedIn" id="linkedin">
                     </a>
-                    <a class="button" href="mailto:rutgerfjansen@gmail.com" target="_blank">
+                    <a class="button" href="mailto:rutgerfjansen@gmail.com" target="_blank" rel="noreferrer">
                         <img src="assets/img/email.svg" alt="email" id="email">
                     </a>
                 </nav>
             </div>
             <div id="profile-description">
-                <h1># About</h1>
-                <p>Hi, I'm</p>
-                <p class="name">Rutger Jansen,</p>
-                <p class="oneliner">fullstack developer.</p>
+                <p class="eyebrow">Hi, my name is</p>
+                <h1 class="name">Rutger Jansen.</h1>
+                <p class="oneliner">I build web apps, data tools, and research-driven products.</p>
                 <p>
-                    I have a passion for people, programming and sports.
-                    Currently, I'm pursuing a Master's degree in Software Engineering and working as a fullstack webdeveloper.
-                    With a background in bio-informatics, I enjoy projects involving data analysis and visualization.
+                    I have a passion for people, programming, and sports. I'm currently pursuing a Master's degree in Software Engineering while working as a full-stack web developer.
+                    With a background in bioinformatics, I enjoy projects involving data analysis, visualization, and real-world problem solving.
                     In my free time, I like cycling and weightlifting.
-                    Take a look at the <a href="#projects" class="highlight un">projects</a> I've been working on!
+                    Take a look at the <a href="#projects" class="highlight">projects</a> I've been working on.
                 </p>
+                <div class="cta-row">
+                    <a class="primary-btn" href="#projects">View projects</a>
+                    <a class="secondary-btn" href="mailto:rutgerfjansen@gmail.com">Email me</a>
+                </div>
+                <ul class="mini-highlights">
+                    <li>Data visualization</li>
+                    <li>Full-stack development</li>
+                    <li>Research tooling</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="section-heading">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Frontend</h3>
+                    <p>Accessible and responsive interfaces with a strong focus on usability and clarity.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Next.js</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <h3>Backend</h3>
+                    <p>APIs, workflows, and robust application logic for practical business and research products.</p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Flask</span>
+                        <span>PostgreSQL</span>
+                        <span>SQLite</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <h3>Data & tooling</h3>
+                    <p>Interactive data analysis and scientific tooling with a strong focus on user experience.</p>
+                    <div class="tech-tags">
+                        <span>Docker</span>
+                        <span>Redis</span>
+                        <span>D3</span>
+                        <span>Bokeh</span>
+                        <span>BLAST</span>
+                    </div>
+                </article>
             </div>
         </section>
 
         <section id="projects"> <!-- projects -->
-            <h1># Projects</h1>
+            <div class="section-heading">
+                <h2>Projects</h2>
+            </div>
+
+            <h3 class="project-subheading">Selected work</h3>
+            <div class="featured-projects">
+                <article class="featured-card">
+                    <span class="project-tag">Research tooling</span>
+                    <h3>RULER</h3>
+                    <p>Containerized bacterial isolate analysis platform with background jobs, data pipelines, and interactive results.</p>
+                </article>
+                <article class="featured-card">
+                    <span class="project-tag">Product work</span>
+                    <h3>MyMicroZoo</h3>
+                    <p>Customer-facing microbiome report with personalized nutrition guidance and practical UX improvements.</p>
+                </article>
+                <article class="featured-card">
+                    <span class="project-tag">Data visualization</span>
+                    <h3>Stravis</h3>
+                    <p>Fitness analytics app connecting to Strava and turning exercise data into interactive summaries.</p>
+                </article>
+            </div>
+
+            <h3 class="project-subheading">All projects</h3>
+
             <!-- alternating left/right text/image -->
             <div class="project-container">
                 <div class="project-description">
-                    <h2>Webinterface for MLVA of C. diff</h2>
+                    <div class="project-header-row">
+                        <h2>RULER</h2>
+                        <span class="project-badge">Research tooling</span>
+                    </div>
                     <p>
-                        Built during my internship at the Leiden Centre of Applied Bioscience as part of my
-                        Bio-informatics studies. This Django application performs Multiple-Locus Variable-number
-                        tandem repeat Analysis (MLVA) on <i>Clostridioides difficile</i> for use at the LUMC.
-                        Users upload their sequences, after which BLAST runs locally as a background job queued
-                        through Redis. No reference genome is needed to find the loci. The results are visualized
-                        in an interactive minimum spanning tree made with D3.js, alongside other plots.
-                        I built the application on my own and presented it to microbiologists at the LUMC to
-                        gather their input.
+                        A Django app for analyzing bacterial isolate data. It lets users upload sequence data,
+                        run BLAST jobs in the background, and explore results through interactive visualizations.
                     </p>
                     <p class="technology">
-                        <span class="tech">HTML</span> - <span class="tech">CSS</span> - <span class="tech">JS</span> -
-                        <span class="tech">Python</span> - <span class="tech">Django</span> - <span
-                            class="tech">Tailwind</span> - <span class="tech">DaisyUI</span> - <span
-                            class="tech">SQLite</span> - <span class="tech">BLAST</span> - <span
-                            class="tech">Redis</span> - <span class="tech">D3</span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">JS</span>, <span class="tech">Tailwind</span>, <span class="tech">DaisyUI</span></span>
+                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span>, <span class="tech">Django</span>, <span class="tech">SQLite</span></span>
+                        <span class="tech-block"><span class="tech-label">Data</span><span class="tech">BLAST</span>, <span class="tech">Redis</span>, <span class="tech">D3</span>, <span class="tech">Docker</span></span>
+                    </p>
+                </div>
+                <div class="screenshot-container">
+                    <a href="assets/img/projects/RULER/login.png">
+                        <img src="assets/img/projects/RULER/login.png" alt="RULER login" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/RULER/investigation_list.png">
+                        <img src="assets/img/projects/RULER/investigation_list.png" alt="RULER investigation list" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/RULER/investigation_detail.png">
+                        <img src="assets/img/projects/RULER/investigation_detail.png" alt="RULER investigation detail" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/RULER/investigation_creation.png">
+                        <img src="assets/img/projects/RULER/investigation_creation.png" alt="RULER investigation creation" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/RULER/analysis.png">
+                        <img src="assets/img/projects/RULER/analysis.png" alt="RULER analysis" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/RULER/MLVA_profiles.png">
+                        <img src="assets/img/projects/RULER/MLVA_profiles.png" alt="RULER MLVA profiles" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/RULER/distance_matrix.png">
+                        <img src="assets/img/projects/RULER/distance_matrix.png" alt="RULER distance matrix" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/RULER/MST.png">
+                        <img src="assets/img/projects/RULER/MST.png" alt="RULER MST" class="screenshot">
+                    </a>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-description">
+                    <div class="project-header-row">
+                        <h2>MyMicroZoo</h2>
+                        <span class="project-badge">Product work</span>
+                    </div>
+                    <p>
+                        A production-facing microbiome report where I added a personalized food recommendation
+                        overview based on user data and questionnaire responses.
+                    </p>
+                    <p class="technology">
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">TypeScript</span>, <span class="tech">React</span>, <span class="tech">Next.js</span>, <span class="tech">Tailwind</span></span>
                     </p>
                 </div>
             </div>
             <div class="project-container">
                 <div class="project-description">
-                    <h2>MyMicroZoo gut microbiome report</h2>
+                    <div class="project-header-row">
+                        <h2>BISA</h2>
+                        <span class="project-badge">Tooling</span>
+                    </div>
                     <p>
-                        The gut microbiome report is an existing product of MyMicroZoo, originally developed by
-                        another company and already running in production. During my graduation internship at
-                        MyMicroZoo, I got the opportunity to build upon it. As the only developer in a small team,
-                        I held many interviews with customers to clarify their needs. I developed several features,
-                        the crown jewel being a personalized overview of foods that are recommended or discouraged, based on
-                        the gut microbiome test and a questionnaire.
+                        A scheduling tool for student assistants, built to simplify shift planning and availability
+                        management.
                     </p>
                     <p class="technology">
-                        <span class="tech">HTML</span> - <span class="tech">CSS</span> - <span
-                            class="tech">TypeScript</span> - <span class="tech">React</span> - <span
-                            class="tech">Next.js</span> - <span class="tech">Tailwind</span>
-                    </p>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="project-description">
-                    <h2>BISA</h2>
-                    <p>
-                        BISA stands for "Bio-informatics student-assistant" and is a passion project made to simplify
-                        the
-                        shift
-                        planning for student-assistants at the University of Applied Sciences in Leiden.
-                    </p>
-                    <p class="technology">
-                        <span class="tech">HTML</span> - <span class="tech">CSS</span> - <span class="tech">JS</span> -
-                        <span class="tech">Python</span> - <span class="tech">Django</span> - <span
-                            class="tech">SQLite</span> - <span class="tech">HTMX</span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">JS</span>, <span class="tech">HTMX</span></span>
+                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span>, <span class="tech">Django</span>, <span class="tech">SQLite</span></span>
                     </p>
                 </div>
                 <div class="screenshot-container">
@@ -125,21 +222,17 @@
             </div>
             <div class="project-container">
                 <div class="project-description">
-                    <h2>Stravis</h2>
+                    <div class="project-header-row">
+                        <h2>Stravis</h2>
+                        <span class="project-badge">Visualization</span>
+                    </div>
                     <p>
-                        After using Strava to track my sports activities for about 3 years,
-                        I
-                        created a way to visualize my activities. Hence the name "Stravis". This Django application
-                        allows the user to connect to their Strava account and synchronize their activities. Total
-                        statistics and other customizable plots are calculated and displayed.
-
-                        D3.js is used to create the "Activity calendar heatmap" and other interactivity. Bokeh is used
-                        to create most plots.
+                        A Strava dashboard that syncs workout data and turns it into summaries, charts, and custom
+                        activity insights.
                     </p>
                     <p class="technology">
-                        <span class="tech">HTML</span> - <span class="tech">CSS</span> - <span class="tech">JS</span> -
-                        <span class="tech">Python</span> - <span class="tech">Django</span> - <span
-                            class="tech">SQLite</span> - <span class="tech">D3</span> - <span class="tech">Bokeh</span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">JS</span>, <span class="tech">D3</span></span>
+                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span>, <span class="tech">Django</span>, <span class="tech">SQLite</span>, <span class="tech">Bokeh</span></span>
                     </p>
                 </div>
                 <div class="screenshot-container">
@@ -167,50 +260,17 @@
             </div>
             <div class="project-container">
                 <div class="project-description">
-                    <h2>Erato</h2>
+                    <div class="project-header-row">
+                        <h2>MasterBlast</h2>
+                        <span class="project-badge">Research tooling</span>
+                    </div>
                     <p>
-                        Developed in a group of students. The application handles grade administration for students.
-                        The client had a lot of specific requirements, which no other grade administration system
-                        satisfied.
-                        I was primarily responsible for communicating with the client and leading meetings, which I
-                        thoroughly enjoyed! The application was never truly finished, because the client's wishes
-                        were too much for us to complete in 7 weeks.
+                        A BLAST job manager with async processing, historical results, and sharing between users.
                     </p>
                     <p class="technology">
-                        <span class="tech">HTML</span> - <span class="tech">CSS</span> - <span class="tech">JS</span> -
-                        <span class="tech">Python</span> - <span class="tech">Django</span> - <span
-                            class="tech">PostgreSQL</span> - <span class="tech">HTMX</span> - <span
-                            class="tech">Docker</span>
-                    </p>
-                </div>
-                <div class="screenshot-container">
-                    <a href="assets/img/projects/Erato/login.png">
-                        <img src="assets/img/projects/Erato/login.png" alt="Erato login" class="screenshot">
-                    </a>
-                    <a href="assets/img/projects/Erato/overview.png">
-                        <img src="assets/img/projects/Erato/overview.png" alt="Erato overview" class="screenshot">
-                    </a>
-                    <a href="assets/img/projects/Erato/results.png">
-                        <img src="assets/img/projects/Erato/results.png" alt="Erato results" class="screenshot">
-                    </a>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="project-description">
-                    <h2>MasterBlast</h2>
-                    <p>
-                        This Django web app is a wrapper for NCBI's BLAST. The application uses Biopython to interact
-                        with the BLAST API and stores the BLAST job in a PostgreSQL database. The user can run jobs
-                        asynchronously,
-                        view old jobs and add other users as friends in order to share BLAST jobs with them. Celery is
-                        used in conjunction with RabbitMQ to run the jobs asynchronously.
-                    </p>
-                    <p class="technology">
-                        <span class="tech">HTML</span> - <span class="tech">CSS</span> - <span class="tech">JS</span> -
-                        <span class="tech">Python</span> - <span class="tech">Biopython</span> - <span
-                            class="tech">Django</span> - <span class="tech">PostgreSQL</span> - <span
-                            class="tech">Docker</span> - <span class="tech">Celery</span> - <span
-                            class="tech">RabbitMQ</span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">JS</span></span>
+                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span>, <span class="tech">Biopython</span>, <span class="tech">Django</span>, <span class="tech">PostgreSQL</span></span>
+                        <span class="tech-block"><span class="tech-label">Infra</span><span class="tech">Docker</span>, <span class="tech">Celery</span>, <span class="tech">RabbitMQ</span></span>
                     </p>
                 </div>
                 <div class="screenshot-container">
@@ -236,45 +296,10 @@
                     </a>
                 </div>
             </div>
-            <div class="project-container">
-                <div class="project-description">
-                    <h2>Reedsnake</h2>
-                    <p>
-                        A Snakemake pipeline for the analysis of DNA sequencing data.
-                        Wrote custom scripts for the quality control and trimming of the reads and used existing tools
-                        to
-                        perform
-                        both a reference-based and a <i>de novo</i> assembly.
-                    </p>
-                    <p class="technology">
-                        <span class="tech">Python</span> - <span class="tech">Snakemake</span> - <span
-                            class="tech">Bash</span>
-                    </p>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="project-description">
-                    <h2>COGselect</h2>
-                    <p>
-                        The application that made me fall in love with web development! The application is very simple,
-                        allowing
-                        the user to connect to a PostgreSQL database and download clusters of orthologous genes (COGs).
-                        The
-                        application visualizes these clusters and allows filtering, so the user can select clusters that
-                        they
-                        deem interesting.
-                    </p>
-                    <p class="technology">
-                        <span class="tech">HTML</span> - <span class="tech">CSS</span> -
-                        <span class="tech">Python</span> - <span class="tech">Flask</span> - <span
-                            class="tech">PostgreSQL</span>
-                    </p>
-                </div>
-            </div>
         </section>
 
-        <a href="#header" id="back-to-top">
-            <h3 class="highlight" x>Back to top</h3>
+        <a href="#about" id="back-to-top">
+            <h3 class="highlight">Back to top</h3>
         </a>
     </main>
     <script src="assets/js/highlightTech.js"></script>
