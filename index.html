@@ -15,7 +15,6 @@
             <img src="assets/img/logo.svg" alt="logo" id="logo">
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="#about" class="highlight">About</a>
-                <a href="#skills" class="highlight">Skills</a>
                 <a href="#projects" class="highlight">Projects</a>
             </nav>
         </div>
@@ -41,61 +40,11 @@
                 <h1 class="name">Rutger Jansen.</h1>
                 <p class="oneliner">I build web apps, data tools, and research-driven products.</p>
                 <p>
-                    I have a passion for people, programming, and sports. I'm currently pursuing a Master's degree in Software Engineering while working as a full-stack web developer.
+                    I have a passion for people, programming, and sports. Currently, I'm pursuing a Master's degree in Software Engineering while working as a full-stack web developer.
                     With a background in bioinformatics, I enjoy projects involving data analysis, visualization, and real-world problem solving.
                     In my free time, I like cycling and weightlifting.
                     Take a look at the <a href="#projects" class="highlight">projects</a> I've been working on.
                 </p>
-                <div class="cta-row">
-                    <a class="primary-btn" href="#projects">View projects</a>
-                    <a class="secondary-btn" href="mailto:rutgerfjansen@gmail.com">Email me</a>
-                </div>
-                <ul class="mini-highlights">
-                    <li>Data visualization</li>
-                    <li>Full-stack development</li>
-                    <li>Research tooling</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills" class="skills-section">
-            <div class="section-heading">
-                <h2>Skills</h2>
-            </div>
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <h3>Frontend</h3>
-                    <p>Accessible and responsive interfaces with a strong focus on usability and clarity.</p>
-                    <div class="tech-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>React</span>
-                        <span>Next.js</span>
-                    </div>
-                </article>
-                <article class="skill-card">
-                    <h3>Backend</h3>
-                    <p>APIs, workflows, and robust application logic for practical business and research products.</p>
-                    <div class="tech-tags">
-                        <span>Python</span>
-                        <span>Django</span>
-                        <span>Flask</span>
-                        <span>PostgreSQL</span>
-                        <span>SQLite</span>
-                    </div>
-                </article>
-                <article class="skill-card">
-                    <h3>Data & tooling</h3>
-                    <p>Interactive data analysis and scientific tooling with a strong focus on user experience.</p>
-                    <div class="tech-tags">
-                        <span>Docker</span>
-                        <span>Redis</span>
-                        <span>D3</span>
-                        <span>Bokeh</span>
-                        <span>BLAST</span>
-                    </div>
-                </article>
             </div>
         </section>
 
@@ -106,46 +55,46 @@
 
             <h3 class="project-subheading">Selected work</h3>
             <div class="featured-projects">
-                <article class="featured-card">
+                <a class="featured-card" href="#project-ruler">
                     <span class="project-tag">Research tooling</span>
                     <h3>RULER</h3>
                     <p>Containerized bacterial isolate analysis platform with background jobs, data pipelines, and interactive results.</p>
-                </article>
-                <article class="featured-card">
+                </a>
+                <a class="featured-card" href="#project-mymicrozoo">
                     <span class="project-tag">Product work</span>
                     <h3>MyMicroZoo gut microbiome report</h3>
                     <p>Customer-facing microbiome report with personalized nutrition guidance and practical UX improvements.</p>
-                </article>
-                <article class="featured-card">
+                </a>
+                <a class="featured-card" href="#project-stravis">
                     <span class="project-tag">Data visualization</span>
                     <h3>Stravis</h3>
                     <p>Fitness analytics app connecting to Strava and turning exercise data into interactive summaries.</p>
-                </article>
+                </a>
             </div>
 
             <h3 class="project-subheading">All projects</h3>
 
             <!-- alternating left/right text/image -->
-            <div class="project-container">
+            <div class="project-container" id="project-ruler">
                 <div class="project-description">
                     <div class="project-header-row">
                         <h2>RULER</h2>
-                        <span class="project-badge">Research tooling</span>
+                        <div class="project-header-actions">
+                            <a class="project-link" href="https://github.com/RutgerFJ/RULER" target="_blank" rel="noreferrer">GitHub</a>
+                            <span class="project-badge">Research tooling</span>
+                        </div>
                     </div>
                     <p>
                         A Django app for analyzing bacterial isolate data. It lets users upload sequence data,
                         run BLAST jobs in the background, and explore results through interactive visualizations.
                     </p>
                     <p class="technology">
-                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span><span class="tech">CSS</span><span class="tech">JS</span><span class="tech">Tailwind</span><span class="tech">DaisyUI</span></span>
-                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span><span class="tech">Django</span><span class="tech">SQLite</span></span>
-                        <span class="tech-block"><span class="tech-label">Data</span><span class="tech">BLAST</span><span class="tech">Redis</span><span class="tech">D3</span><span class="tech">Docker</span></span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">JS</span><span class="tech-separator">,</span><span class="tech">Tailwind</span><span class="tech-separator">,</span><span class="tech">DaisyUI</span><span class="tech-separator">,</span><span class="tech">D3</span></span>
+                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span><span class="tech-separator">,</span><span class="tech">Django</span><span class="tech-separator">,</span><span class="tech">SQLite</span></span>
+                        <span class="tech-block"><span class="tech-label">Data</span><span class="tech">BLAST</span><span class="tech-separator">,</span><span class="tech">Redis</span><span class="tech-separator">,</span><span class="tech">Docker</span></span>
                     </p>
                 </div>
                 <div class="screenshot-container">
-                    <a href="assets/img/projects/RULER/login.png">
-                        <img src="assets/img/projects/RULER/login.png" alt="RULER login" class="screenshot">
-                    </a>
                     <a href="assets/img/projects/RULER/investigation_list.png">
                         <img src="assets/img/projects/RULER/investigation_list.png" alt="RULER investigation list" class="screenshot">
                     </a>
@@ -154,9 +103,6 @@
                     </a>
                     <a href="assets/img/projects/RULER/investigation_creation.png">
                         <img src="assets/img/projects/RULER/investigation_creation.png" alt="RULER investigation creation" class="screenshot">
-                    </a>
-                    <a href="assets/img/projects/RULER/analysis.png">
-                        <img src="assets/img/projects/RULER/analysis.png" alt="RULER analysis" class="screenshot">
                     </a>
                     <a href="assets/img/projects/RULER/MLVA_profiles.png">
                         <img src="assets/img/projects/RULER/MLVA_profiles.png" alt="RULER MLVA profiles" class="screenshot">
@@ -169,7 +115,7 @@
                     </a>
                 </div>
             </div>
-            <div class="project-container">
+            <div class="project-container" id="project-mymicrozoo">
                 <div class="project-description">
                     <div class="project-header-row">
                         <h2>MyMicroZoo gut microbiome report</h2>
@@ -180,11 +126,28 @@
                         overview based on user data and questionnaire responses.
                     </p>
                     <p class="technology">
-                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span><span class="tech">CSS</span><span class="tech">TypeScript</span><span class="tech">React</span><span class="tech">Next.js</span><span class="tech">Tailwind</span></span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">TypeScript</span><span class="tech-separator">,</span><span class="tech">React</span><span class="tech-separator">,</span><span class="tech">Next.js</span><span class="tech-separator">,</span><span class="tech">Tailwind</span></span>
                     </p>
                 </div>
+                <div class="screenshot-container">
+                    <a href="assets/img/projects/MyMicroZoo/results-gb-summary.png">
+                        <img src="assets/img/projects/MyMicroZoo/results-gb-summary.png" alt="MyMicroZoo gut bacteria summary" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/MyMicroZoo/results-tips-overview.png">
+                        <img src="assets/img/projects/MyMicroZoo/results-tips-overview.png" alt="MyMicroZoo tips overview" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/MyMicroZoo/results-diet-avoid.png">
+                        <img src="assets/img/projects/MyMicroZoo/results-diet-avoid.png" alt="MyMicroZoo foods to avoid" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/MyMicroZoo/results-diet-incorporate.png">
+                        <img src="assets/img/projects/MyMicroZoo/results-diet-incorporate.png" alt="MyMicroZoo foods to incorporate" class="screenshot">
+                    </a>
+                    <a href="assets/img/projects/MyMicroZoo/results-lifestyle.png">
+                        <img src="assets/img/projects/MyMicroZoo/results-lifestyle.png" alt="MyMicroZoo lifestyle results" class="screenshot">
+                    </a>
+                </div>
             </div>
-            <div class="project-container">
+            <div class="project-container" id="project-bisa">
                 <div class="project-description">
                     <div class="project-header-row">
                         <h2>BISA</h2>
@@ -195,14 +158,17 @@
                         management.
                     </p>
                     <p class="technology">
-                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span><span class="tech">CSS</span><span class="tech">JS</span><span class="tech">HTMX</span></span>
-                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span><span class="tech">Django</span><span class="tech">SQLite</span></span>
+                        <span class="tech-block">
+                            <span class="tech-label">Frontend</span>
+                            <span class="tech">HTMX</span>
+                        </span>
+                        <span class="tech-block">
+                            <span class="tech-label">Backend</span>
+                            <span class="tech">Python</span><span class="tech-separator">,</span><span class="tech">Django</span><span class="tech-separator">,</span><span class="tech">SQLite</span>
+                        </span>
                     </p>
                 </div>
                 <div class="screenshot-container">
-                    <a href="assets/img/projects/BISA/login.png">
-                        <img src="assets/img/projects/BISA/login.png" alt="BISA login" class="screenshot">
-                    </a>
                     <a href="assets/img/projects/BISA/task-list.png">
                         <img src="assets/img/projects/BISA/task-list.png" alt="BISA task list" class="screenshot">
                     </a>
@@ -220,7 +186,7 @@
                     </a>
                 </div>
             </div>
-            <div class="project-container">
+            <div class="project-container" id="project-stravis">
                 <div class="project-description">
                     <div class="project-header-row">
                         <h2>Stravis</h2>
@@ -231,14 +197,15 @@
                         activity insights.
                     </p>
                     <p class="technology">
-                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span><span class="tech">CSS</span><span class="tech">JS</span><span class="tech">D3</span></span>
-                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span><span class="tech">Django</span><span class="tech">SQLite</span><span class="tech">Bokeh</span></span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span>
+                        <span class="tech">D3</span><span class="tech-separator">,</span><span class="tech">Bokeh</span>
+                    </span>
+                        <span class="tech-block"><span class="tech-label">Backend</span>
+                        <span class="tech">Python</span><span class="tech-separator">,</span><span class="tech">Django</span><span class="tech-separator">,</span><span class="tech">SQLite</span>
+                    </span>
                     </p>
                 </div>
                 <div class="screenshot-container">
-                    <a href="assets/img/projects/Stravis/login.png">
-                        <img src="assets/img/projects/Stravis/login.png" alt="Login page" class="screenshot">
-                    </a>
                     <a href="assets/img/projects/Stravis/overview.png">
                         <img src="assets/img/projects/Stravis/overview.png" alt="Overview page" class="screenshot">
                     </a>
@@ -248,13 +215,6 @@
                     <a href="assets/img/projects/Stravis/weighttraining.png">
                         <img src="assets/img/projects/Stravis/weighttraining.png" alt="Weight training page"
                             class="screenshot">
-                    </a>
-                    <a href="assets/img/projects/Stravis/bodymetrics.png">
-                        <img src="assets/img/projects/Stravis/bodymetrics.png" alt="Body metrics page"
-                            class="screenshot">
-                    </a>
-                    <a href="assets/img/projects/Stravis/database.png">
-                        <img src="assets/img/projects/Stravis/database.png" alt="Database page" class="screenshot">
                     </a>
                 </div>
             </div>
@@ -268,15 +228,12 @@
                         A BLAST job manager with async processing, historical results, and sharing between users.
                     </p>
                     <p class="technology">
-                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">HTML</span><span class="tech">CSS</span><span class="tech">JS</span></span>
-                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span><span class="tech">Biopython</span><span class="tech">Django</span><span class="tech">PostgreSQL</span></span>
-                        <span class="tech-block"><span class="tech-label">Infra</span><span class="tech">Docker</span><span class="tech">Celery</span><span class="tech">RabbitMQ</span></span>
+                        <span class="tech-block"><span class="tech-label">Frontend</span><span class="tech">JS</span></span>
+                        <span class="tech-block"><span class="tech-label">Backend</span><span class="tech">Python</span><span class="tech-separator">,</span><span class="tech">Biopython</span><span class="tech-separator">,</span><span class="tech">Django</span><span class="tech-separator">,</span><span class="tech">PostgreSQL</span></span>
+                        <span class="tech-block"><span class="tech-label">Infra</span><span class="tech">Docker</span><span class="tech-separator">,</span><span class="tech">Celery</span><span class="tech-separator">,</span><span class="tech">RabbitMQ</span></span>
                     </p>
                 </div>
                 <div class="screenshot-container">
-                    <a href="assets/img/projects/MasterBlast/login.png">
-                        <img src="assets/img/projects/MasterBlast/login.png" alt="BISA login" class="screenshot">
-                    </a>
                     <a href="assets/img/projects/MasterBlast/BLAST.png">
                         <img src="assets/img/projects/MasterBlast/BLAST.png" alt="BISA task list" class="screenshot">
                     </a>
@@ -288,10 +245,6 @@
                     </a>
                     <a href="assets/img/projects/MasterBlast/recent.png">
                         <img src="assets/img/projects/MasterBlast/recent.png" alt="BISA task calendar"
-                            class="screenshot">
-                    </a>
-                    <a href="assets/img/projects/MasterBlast/personalia.png">
-                        <img src="assets/img/projects/MasterBlast/personalia.png" alt="BISA availability list"
                             class="screenshot">
                     </a>
                 </div>

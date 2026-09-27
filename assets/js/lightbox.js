@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.screenshot-container').forEach(container => {
         const containerLinks = Array.from(container.querySelectorAll('a'));
+        const imageCount = containerLinks.length;
+
+        container.dataset.albumCount = `${imageCount} ${imageCount === 1 ? 'screenshot' : 'screenshots'}`;
 
         containerLinks.forEach((link, linkIndex) => {
             link.addEventListener('click', event => {
